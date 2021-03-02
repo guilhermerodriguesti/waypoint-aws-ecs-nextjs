@@ -20,6 +20,12 @@ app "app-nextjs" {
   deploy {
     use "aws-ecs" {
       region = "us-east-1"
+      cluster = "waypoint-nextjs-cluster"
+      subnets = [
+        "subnet-011221418e60bda3a",
+        "subnet-00499649dce767a39",
+        "subnet-01bdbb94dd3a12e4a",
+      ]
       memory = "512"
     }
   }
