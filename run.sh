@@ -22,6 +22,7 @@ terraform plan
 echo "----------------------------------------"
 echo "Applying..."
 terraform apply -auto-approve
+#terraform destroy -auto-approve
 echo "----------------------------------------"
 echo "Done!"
 echo "----------------------------------------"
@@ -35,3 +36,6 @@ waypoint init
 
 
 waypoint up
+
+
+#waypoint destroy

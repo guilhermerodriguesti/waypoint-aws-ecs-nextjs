@@ -10,5 +10,5 @@ resource "aws_ecs_cluster" "nextjs-cluster" {
   name = "waypoint-nextjs-cluster"
 }
 resource "aws_ecr_repository" "nextjs-image-repo" {
-  name = "nextjs-image"
+  name = "nextjs-image-repo"
 }
