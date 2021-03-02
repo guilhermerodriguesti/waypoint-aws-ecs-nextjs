@@ -1,12 +1,14 @@
 #!/bin/sh
-export AWS_ACCESS_KEY_ID="AKIAYZ2YHYSTYJU7Q7XZ"
-export AWS_SECRET_ACCESS_KEY="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"
-export AWS_DEFAULT_REGION="us-east-1"
+
 ENV="dev"
 
 if [ "$1" = "prod" ]; then
   ENV="prod"
 fi
+
+rm -rf .terraform*
+rm -rf terraform.tfstate
+rm -rf terraform.tfstate.backup
 
 echo "----------------------------------------"
 echo "Formatting terraform files"
@@ -30,11 +32,8 @@ echo "Cleaning up plan file"
 rm -rf plan.tfout
 echo "----------------------------------------"
 
-
-
+rm -rf .waypoint*
 waypoint init
-
-
 waypoint up
 
 
