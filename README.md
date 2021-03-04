@@ -11,16 +11,14 @@
 * Secret Access Key
 
 ## 🔧 Instruções de Instalação
-1. Configure AWS
+1. Configure as Credenciais AWS
 ```
 $ aws configure
 ```
-2.  Clonar este repositório:
-```
-git clone https://github.com/guilhermerodriguesti/waypoint-aws-ecs-nextjs.git
+2.  Clonar este repositório;
+3.  Configurar subnets no `main.tf`
+4.  Executar o `./run.sh`
 
-./run.sh
-```
 
 ## Output Example
 ```
